@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<base href="./">
+	<link rel="stylesheet" href="css/style.css">
+
+	<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="js/jquery.attachFile.js"></script>
+
+	<script type="text/javascript">
+		$(function(){
+			$('[data-plugin]').attachFile({attributes: {delete_item: {class: "file-del"}}});
+		})
+	</script>
+</head>
+<body>
+<div class="field">
+	<form action="index.php">
+		<div class="b-input-file" data-plugin="attachFile">
+			<div class="file-btn">
+				<input type="file" class="input-file" data-file/>
+
+				<div data-label="" class="input-btn"
+					data-vocabulary="{&quot;default&quot; : &quot;Загрузить фото/файл&quot;, &quot;more&quot; : &quot;Добавить еще фото/файл&quot;}"
+				>Загрузить фото/файл</div>
+			</div>
+			<div data-files-list data-default="файл не выбран"><div data-file-empty class="empty">файл не выбран</div></div>
+		</div>
+		<input type="submit"/>
+	</form>
+
+</div>
+</body>
+</html>

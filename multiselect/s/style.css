@@ -1,0 +1,223 @@
+* {
+	padding: 0;
+	margin: 0;
+	outline:none;
+}
+
+/* checkbox */
+
+input[type=checkbox]{
+	position:relative;
+	top:1px;
+	left: 1px;
+	cursor:pointer;
+}
+
+input[type=checkbox]:not(.default) {opacity: 0;}
+
+input[type=checkbox]+span{
+	padding-left:8px;
+	cursor:pointer;
+}
+
+input[type=checkbox]+span:before{
+	content:'';
+	position:absolute;
+	background:#edeff0;
+	background:linear-gradient(to bottom, #ffffff 0%, #dde4e8 100%);
+	border:1px solid #8d989f;
+	box-shadow:0 1px 3px rgba(0,0,0,0.2);
+	width:14px;
+	height:14px;
+	margin:0 0 0 -21px;
+	visibility:hidden;
+}
+
+input[type=checkbox]:checked+span:before{
+	background:#fdfadc;
+	box-shadow:0 1px 1px rgba(0,0,0,0.1) inset;
+	background:#fdfadc url(./images/sprite.png) no-repeat -349px -68px;
+}
+
+input[type=checkbox]+span:hover:before{
+	box-shadow:0 0 3px rgba(0,117,178,075);
+	border-color: #217ca2;
+}
+
+input[type=checkbox]:not(.default)+span:before{visibility:visible;}
+
+/* /checkbox */
+
+.b-content{margin:20px auto;width:60%}
+.b-field{margin:20px auto;}
+
+.clear{}
+.clear:after{
+	content:	'';
+	position:	relative;
+	display: block;
+	clear:both;
+}
+
+
+select.activated,
+,
+input[type=text].activated,
+input[type=number].activated{
+	background-color: #fdfadc;
+}
+
+select.empty,
+.b-select.empty{
+	background-color: #ffffff;
+	color: #797979;
+}
+
+.b-select{
+	padding: 0;
+
+	display: inline-block;
+	position: relative;
+	cursor: pointer;
+	white-space: nowrap;
+	cursor: pointer;
+	height: 25px;
+	float: left;
+
+	border: 1px solid #8d989f;
+	box-shadow: 0 1px 1px rgba(0,0,0,0.15) inset;
+	font: 14px Arial,sans-serif;
+	height: 25px;
+	padding: 0 5px;
+	background-color: #ffffff;
+	border-radius:1px;
+	transition:box-shadow ease 0.2s, border-color ease 0.2s;
+}
+
+.b-select:hover,
+.b-select.activated,
+.b-select:focus
+{
+	box-shadow:0 0 3px rgba(0,117,178,075),0 1px 1px rgba(0,0,0,0.15) inset;
+	border-color: #217ca2;
+	background-color: #fdfadc;
+}
+
+.b-select .value{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	cursor: pointer;
+	padding-left: 5px;
+	line-height: 25px;
+	height: 25px;
+	z-index: 1;
+}
+
+.b-select .value:after{
+	content: '';
+	width: 21px;
+	height: 25px;
+	border: 1px solid #8d989f;
+	background: #f3f6f7 url(./images/sprite.png) -59px 6px no-repeat;
+	background: url(./images/sprite.png) -59px 6px no-repeat, linear-gradient(to bottom, #ffffff, #f1f6f8);
+	box-shadow:0 1px 3px rgba(0,0,0,0.2);
+	position: absolute;
+	right: -1px;
+	top: -1px;
+}
+
+/*multiselect mod*/
+.b-select.multi-select{min-width: 148px;}
+.b-select.multi-select .select-list.active{display: block;}
+.b-select.multi-select .select-list{
+	background: #fff;
+	border: 1px solid #8d989f;
+	padding: 8px 0 0;
+	z-index: 10;
+	position: absolute;
+	top: 25px;
+	left: -1px;
+	display: none;
+}
+
+/*scrollPane mode*/
+.b-select.multi-select .select-list .scroll{
+	position: relative;
+	height: 200px;
+	padding: 0 10px 0 0;
+	overflow: hidden;
+}
+/*end scrollPane mode*/
+
+.b-select.multi-select .select-list label{
+	display: block;
+	padding: 3px 8px 3px 21px;
+}
+.b-select.multi-select .select-list label:hover{
+	background:#ecf2f4;
+}
+
+.b-select.multi-select .b-multiselect-toolbar{margin: 8px 0 0 0;}
+.b-multiselect-toolbar{
+	font: bold 10px Arial, Tahoma sans-serif;
+	background: #e7f3fa;
+	padding: 8px;
+	border-top: 1px solid #e0ebef;
+	overflow: hidden;
+}
+.b-multiselect-toolbar .toolbar-button{display: block; cursor: pointer;}
+.b-multiselect-toolbar .apply{color: #006699;  float: left;}
+.b-multiselect-toolbar .clear{color: #797979; float: right;}
+
+/*group multiselect*/
+.b-select.multi-select.group{}
+.b-select.multi-select.group .scroll{}
+.b-select.multi-select.group .parent div{font: bold 13px Arial, Tahoma sans-serif; color:#000; }
+.b-select.multi-select.group .parent span{font-weight: bold;}
+.b-select.multi-select.group .group-wrapper{}
+.b-select.multi-select.group .group-wrapper label{padding: 3px 8px 3px 29px;display: block;white-space: nowrap;}
+.b-select.multi-select.group .group-wrapper label input[type=checkbox]{display: none;}
+.b-select.multi-select.group .group-wrapper .parent{padding: 4px 8px 4px 21px;}
+.b-select.multi-select.group .group-wrapper .parent>div{margin: 0 0 0 -5px;}
+/*end group multiselect*/
+
+
+/* end multiselect mod*/
+
+/*checkbox*/
+.b-select.multi-select label input[type=checkbox]{opacity: 0;display: none;}
+
+.b-select.multi-select label input[type=checkbox]+span{
+	color: #000;
+	font: 13px Arial, Tahoma, sans-serif;
+	padding: 0 0 0 8px;
+	position: relative;
+}
+
+.b-select.multi-select label input[type=checkbox]+span:before{
+	content: '';
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	background: url(./images/sprite.png) no-repeat 0px 1px;
+	border: none;
+	box-shadow: 0 0 0 transparent;
+	left: 8px;
+	top: 0px;
+}
+
+.b-select.multi-select label input[type=checkbox]:checked+span:before{
+	content: '';
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	background: url(./images/sprite.png) no-repeat -22px 1px;
+	border: none;
+	box-shadow: 0 0 0 transparent;
+	left: 8px;
+	top: 0px;
+}
+/*end checkbox*/

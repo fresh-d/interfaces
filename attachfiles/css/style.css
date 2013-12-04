@@ -1,0 +1,96 @@
+.b-input-file .file-btn{
+	height: 34px;
+	overflow: hidden;
+	cursor: pointer;
+	position: relative;
+}
+
+.b-input-file .input-btn{
+	padding: 7px 10px 7px 30px;
+	display: block;
+	background-color: #f6f6f6;
+	border-bottom: 2px solid #019999;
+	height: 18px;
+	transition:border-color 0.2s ease, color 0.2s ease, background-color 0.2s ease;
+	position: relative;
+}
+
+.b-input-file .input-btn:after{
+	content: '';
+	display: block;
+	position: absolute;
+	left: 12px;
+	top: 12px;
+	background: url("./images/sprite.png") -148px -37px no-repeat;
+	width: 10px;
+	height: 10px;
+}
+.b-input-file .input-btn:hover{
+	background-color: #019999;
+	color: #ffffff;
+}
+
+.b-input-file .input-file:hover+.input-btn:after,
+.b-input-file .input-btn:hover:after{
+	content: '';
+	display: block;
+	position: absolute;
+	left: 12px;
+	top: 12px;
+	background: url("./images/sprite.png") -133px -37px no-repeat;
+	width: 10px;
+	height: 10px;
+}
+
+.b-input-file .file-name{
+	margin-top: 6px;
+	color: #727c80;
+	position: relative;
+	padding: 0 0 0 30px;
+	cursor: default;
+}
+
+.b-input-file .empty{
+	margin-top: 6px;
+	color: #727c80;
+	position: relative;
+	padding: 0 0 0 12px;
+	cursor: default;
+}
+
+.b-input-file .file-del{
+	content: '';
+	display: block;
+	position: absolute;
+	left: 12px;
+	top: 6px;
+	background: url("./images/sprite.png") -164px -38px no-repeat;
+	width: 9px;
+	height: 9px;
+}
+
+.b-input-file .file-del:hover{
+	content: '';
+	display: block;
+	position: absolute;
+	left: 12px;
+	top: 6px;
+	background: url("./images/sprite.png") -178px -38px no-repeat;
+	width: 9px;
+	height: 9px;
+}
+
+.b-input-file .input-file{
+	cursor: pointer;
+	font-size: 100px;
+	opacity: 0;
+	filter:alpha(opacity=0);
+	position: absolute;
+	z-index:100;
+	height: 34px;
+}
+
+.b-input-file .input-file:hover+.input-btn{
+	background-color: #019999;
+	color: #ffffff;
+}
