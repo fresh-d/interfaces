@@ -1,0 +1,104 @@
+[
+					{
+						"featureType": "road.highway",
+						"elementType": "geometry.fill",
+						"stylers": [
+							{ "color": "#60a9a5" }
+						]
+					},
+					{
+						"featureType": "road.highway",
+						"elementType": "geometry.stroke",
+						"stylers": [
+							{ "color": "#2e7d79" }
+						]
+					},
+					{
+						"featureType": "road.highway",
+						"elementType": "labels.text",
+						"stylers": [
+							{ "color": "#434343" }
+						]
+					},
+					{
+						"featureType": "road.highway",
+						"elementType": "labels.text.stroke",
+						"stylers": [
+							{ "weight": 3 },
+							{ "color": "#dfdfdf" }
+						]
+					},
+					{
+						"featureType": "landscape.man_made",
+						"elementType": "geometry.fill",
+						"stylers": [
+							{ "color": "#ebebeb" },
+							{ "lightness": 20 }
+						]
+					},
+					{
+						"featureType": "poi",
+						"elementType": "geometry.fill",
+						"stylers": [
+							{ "color": "#dadadd" }
+						]
+					},
+					{
+						"featureType": "road.arterial",
+						"elementType": "labels.text.fill",
+						"stylers": [
+							{ "saturation": -100 },
+							{ "gamma": 1.2 }
+						]
+					},
+					{
+						"featureType": "road.local",
+						"elementType": "labels.text.fill",
+						"stylers": [
+							{ "gamma": 1.2 },
+							{ "saturation": -100 }
+						]
+					},
+					{
+						"featureType": "landscape.natural",
+						"stylers": [
+							{ "color": "#c5d8d6" }
+						]
+					},
+					{
+						"featureType": "water",
+						"elementType": "geometry.fill",
+						"stylers": [
+							{ "color": "#a0bfe2" },
+							{ "saturation": -20 }
+						]
+					},
+					{
+						"featureType": "road.local",
+						"elementType": "geometry.stroke",
+						"stylers": [
+							{ "saturation": -100 }
+						]
+					},
+					{
+						"featureType": "road.arterial",
+						"elementType": "geometry.stroke",
+						"stylers": [
+							{ "saturation": -100 }
+						]
+					},
+					{
+						"featureType": "administrative.neighborhood",
+						"elementType": "labels.text.fill",
+						"stylers": [
+							{ "saturation": -100 },
+							{ "lightness": 20 }
+						]
+					},
+					{
+						"featureType": "administrative.locality",
+						"stylers": [
+							{ "saturation": -100 }
+						]
+					}
+				]

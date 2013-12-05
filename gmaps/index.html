@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Gmap</title>
+
+	<!--Libraries-->
+	<script src="js/lib/jquery-1.10.2.min.js" type="text/javascript"></script>
+
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false" type="text/javascript"></script>
+
+	<!--Plugins-->
+	<script src="js/plugins/jquery.GoogleMaps.js" type="text/javascript"></script>
+
+	<script>
+		//Init
+		$(function(){
+			$("[data-map]").googleMaps({
+				"coordinates" : [48.44682185886051,35.07391154766083],
+				"marker" : {
+					"title" : "Name",
+					"icon" : "images/map-marker.png",
+					"size" : [75, 89],
+					"anchor" : [35, 92]
+				},
+				"style": "google_maps_style_settings.json" //src-file or object contains MapStyle http://gmaps-samples-v3.googlecode.com/svn/trunk/styledmaps/wizard/index.html
+			})
+		})
+	</script>
+
+	<style>
+		.map-canvas{width:100%; height: 300px;}
+	</style>
+
+</head>
+<body>
+<div class="map-canvas" data-map></div>
+</body>
+</html>
