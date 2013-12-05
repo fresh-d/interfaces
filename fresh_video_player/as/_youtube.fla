@@ -1,0 +1,49 @@
+
+import flash.system.Security;
+
+Security.allowInsecureDomain("*");
+Security.allowDomain("*");
+
+// This will hold the API player instance once it is initialized.
+var player:Object;
+
+var loader:Loader = new Loader();
+loader.contentLoaderInfo.addEventListener(Event.INIT, onLoaderInit);
+loader.load(new URLRequest("http://www.youtube.com/apiplayer?version=3"));
+
+function onLoaderInit(event:Event):void {
+    addChild(loader);
+    loader.content.addEventListener("onReady", onPlayerReady);
+    loader.content.addEventListener("onError", onPlayerError);
+    loader.content.addEventListener("onStateChange", onPlayerStateChange);
+    loader.content.addEventListener("onPlaybackQualityChange", onVideoPlaybackQualityChange);
+}
+
+function onPlayerReady(event:Event):void {
+    // Event.data contains the event parameter, which is the Player API ID
+    trace("player ready:", Object(event).data);
+
+    // Once this event has been dispatched by the player, we can use
+    // cueVideoById, loadVideoById, cueVideoByUrl and loadVideoByUrl
+    // to load a particular YouTube video.
+   player = loader.content;
+   player.loadVideoById("nxrmJtaZBA0");
+   player.setSize(640, 360);
+
+}
+
+function onPlayerError(event:Event):void {
+    // Event.data contains the event parameter, which is the error code
+    trace("player error:", Object(event).data);
+}
+
+function onPlayerStateChange(event:Event):void {
+    // Event.data contains the event parameter, which is the new player state
+    trace("player state:", Object(event).data);
+}
+
+function onVideoPlaybackQualityChange(event:Event):void {
+    // Event.data contains the event parameter, which is the new video quality
+    trace("video quality:", Object(event).data);
+}
+

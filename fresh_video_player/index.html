@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Fresh player</title>
+
+<link rel="stylesheet" type="text/css" href="s/youtube_player.css" />
+<link rel="stylesheet" type="text/css" href="s/youTubePlayer-1.1.css" />
+
+</head>
+
+<body>
+
+<div id="page">
+
+	<div class="player"></div>
+
+</div>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+<script src="js/helper.js"></script>
+<script src="js/jquery.swfobject.1-1-1.min.js"></script>
+<script src="js/jquery.youTubePlayer-1.1.js"></script>
+<script src="js/jquery.easydrag.js"></script>
+
+<script>
+	$(document).ready(function(){
+
+		$('.player').youTubeEmbed({
+			video				:'http://www.youtube.com/watch?v=u1zgFlCw8Aw',
+			width				: 640, 		// Height is calculated automatically
+			control				: true,
+			elapsed			: true,
+			progressBar	: true,	// Hide the progress bar
+			toolBar			: true, // "on" toolbar container
+			ddBar				: true, // "on" drag_and_grop container,
+			//fullScreen		: {holder: 'fullScreen'}, // "on" full creen button
+			controlBar		: {holder: 'controlBar', buttons: ['play']},
+			volumeBar		: {holder: 'volumeBar', grade: 10},
+			timeBar			: {holder:'timeBar', time_left: 'time_left', time_remaning: 'time_remaning'}
+			//imgHolder		: 'img_holder'
+		});
+
+	});
+
+</script>
+
+</body>
+</html>
